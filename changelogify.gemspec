@@ -4,22 +4,17 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'changelogify/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "changelogify"
-  spec.version       = Changelogify::VERSION
-  spec.authors       = ["Arthur Maltson"]
-  spec.email         = ["arthur_maltson@otpp.com"]
+  spec.name        = "changelogify"
+  spec.version     = Changelogify::VERSION
+  spec.authors     = ["Arthur Maltson"]
+  spec.email       = ["arthur_maltson@otpp.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
-
-  # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
-  # delete this section to allow pushing this gem to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
-  end
+  spec.summary     = 'Automate a changelog using http://keepachangelog.com format'
+  spec.description = %q{Keeping a changelog can be a pain, and adding new changelog
+  entries is annoying. Why not automate the task with `changelogify`. This gem will
+  help you keep a changelog and follow the standard http://keepachangelog.com
+  format.}
+  spec.homepage    = 'https://github.com/amaltson/changelogify'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"
