@@ -7,15 +7,7 @@ module Changelogify
     include GLI::App
 
     def initialize
-      version_command
-    end
-
-    def version_command
-      command :version do |c|
-        c.action do
-          puts Changelogify::VERSION
-        end
-      end
+      version Changelogify::VERSION
     end
   end
 end

@@ -33,7 +33,7 @@ window and typing:
 
 ```
 $ changelogify --version
-0.1.0
+changelogify version 0.1.0
 ```
 
 ## Contributing
