@@ -16,4 +16,14 @@ describe Changelogify::Cli do
         .to_stdout
     end
   end
+
+  context 'help' do
+    it 'should print out useful program description for help' do
+      expect { subject.run(['--help']) }
+        .to output(
+          %r{CHANGELOG entry creator based on http://keepachangelog.com}
+        )
+        .to_stdout
+    end
+  end
 end
